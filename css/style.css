@@ -1,0 +1,108 @@
+/* style.css */
+:root {
+  --bg-image: url('../public/sidi.png');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+nav {
+  display: flex;
+  gap: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+#mobileMenu {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 10px;
+}
+#mobileMenu a {
+  color: white;
+  padding: 5px 0;
+}
+.hero {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.hero p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.social-icons img {
+  width: 24px;
+  margin: 0 5px;
+}
+.page-content {
+  background: white;
+  color: black;
+  padding: 60px 20px;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  #mobileMenu {
+    display: none;
+  }
+  #mobileMenu.active {
+    display: flex;
+  }
+}
